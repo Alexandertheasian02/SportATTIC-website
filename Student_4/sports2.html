@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8" />
+		<meta charset="utf-8">
+		<link rel="icon" href="../Images/Titleicon.png">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+		
+		<title>Gallery</title>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<script>
+			function scrollToSection(id) {
+				var section = document.getElementById(id);
+				var topPos = section.offsetTop;
+				window.scrollTo({
+					top: topPos,
+					behavior: "smooth"
+				});
+			}
+		</script>
+
+<style>
+.football-BI{
+background-image: url(../Images/wp.jpg);
+background-size: cover;
+color: rgb(19, 18, 18);
+object-fit: cover;
+}  
+.cell {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  margin-right: 10px;
+  cursor: pointer;
+  border: 1px solid #000;
+  box-sizing: border-box;
+}
+.cell:hover {
+  opacity: 0.8;
+} 
+#displayText{
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  z-index: 3;
+}
+.imgfg{
+  max-width: 100%;
+}
+#tetris-block {
+  margin-top: 97px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between 30px;
+  z-index: 2;
+}
+.font{
+  cursor: pointer;
+}
+.font:hover{
+  opacity: 0.6;
+}
+#tetris-block #font{
+  vertical-align: middle;
+}
+
+.font {
+  display: flex;
+  align-items: center;
+}
+
+
+.tile {
+  position: relative;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.5s ease;
+  z-index: 0;
+}
+
+.tile:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tile .content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  transform: translateY(100%);
+  transition: all 0.5s ease;
+}
+
+.tile:hover .content {
+  transform: translateY(0);
+}
+
+.tile h2 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.tile p {
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+
+	</style>
+	</head>
+	<body>
+		<header class="headerf">
+			<nav>
+				<a href="../Student_2/Mainpage.html">
+				<img class="icon" src="../Images/ICON_a.png" alt="Logo">
+				</a>
+				<ul id="navlist">
+					<li><a href="../Student_2/Mainpage.html">Home</a></li>
+					<li><a href="../Student_2/Comment_Form.html">Comments</a></li>
+					<li><a href="../Student_1/Shop.html">Shop</a></li>
+					<li><a href="../Student_3/qna.html">Quiz</a></li>
+					<li><a class="active_1"href="../Student_4/sitemap.html">Site Map</a></li>
+					<li><a href="../Student_3/about.html">About Us</a></li>
+					<li><a class="active_1" href="../Student_4/sports2.html">Gallery</a></li>
+				</ul>
+	        </nav>
+		</header>
+
+		
+	 <body  class="football-BI" id="top">
+		
+		<div id="tetris-block">
+			<div class="cell" id="cell1"></div>
+			<div class="cell" id="cell2"></div>
+			<div class="cell" id="cell3"></div>
+			<div class="cell" id="cell4">
+			  <img src="icons8-reset-64.png">
+			</div>
+			<div class="font" id="decrease"><img src="icons8-decrease-font-48.png"></div>
+			<div class="font" id="increase"><img src="icons8-increase-font-48.png"></div>
+		  </div>
+	  <div id="displayText"></div>	
+		
+	 
+	  
+
+
+		<div class="whole-container">
+			<h1 class="h1f">Gallery</h1>
+			<div class="button-container">
+				<button role="button" onclick="scrollToSection('Realmadrid')">Real Madrid</button>
+				<button role="button" onclick="scrollToSection('Bayernmunich')">Bayern Munich</button>
+				<button role="button" onclick="scrollToSection('acmilan')">Ac Milan</button>
+				<button role="button" onclick="scrollToSection('Barcelona')">Barcelona</button>
+				<button role="button" onclick="scrollToSection('Liverpool')">Liverpool</button>
+				<button role="button" onclick="scrollToSection('Manchesterunited')">Manchester united</button>
+			</div>
+			<br><br>
+
+	
+            <h3 class="h3f" id="Bestplayers">Best Players</h3>
+			<P>These are the greatest players ever to play the game</P>
+          
+
+          <card class="card"><img src="../Images/cr7.jpg" alt="">Cristiano Ronaldo</card>
+          <card class="card"><img src="../Images/messi2.jpg" alt="">Lionel Messi</card>
+          <card class="card"><img src="../Images/pele.jpg" alt="">Pele</card><br><br>
+          <card class="card"><img src="../Images/maradona2.jpg" alt="">Deigo Maradona</card>
+          <card class="card"><img src="../Images/zidane3.jpg" alt="">Zinedine zidane</card>
+          <br> <br> <br>
+
+		  <h1>National Teams</h1>
+		  <br><br><br>
+		  <div class="tile">
+			<img src="../Images/brazil.jpg" />
+			<div class="content">
+			  <h2>Brazil football team</h2>
+			  <p>
+				The Brazil national football team, commonly referred to as the Seleção, is one of the most successful national teams in the history of international football. With a record of five FIFA World Cup titles and an impressive array of talented players, Brazil is known for its iconic yellow and green jersey and distinctive playing style. The Seleção has a storied history dating back to the early 1900s, with notable achievements including the creation of jogo bonito, the beautiful game, and the contributions of legendary players such as Pelé, Ronaldo, and Ronaldinho. Brazil's national team is revered not only for its on-field success but also for its cultural and social impact both within Brazil and around the world. As one of the most dominant footballing nations, the Brazil national team is a source of pride and passion for millions of fans worldwide
+				</p>
+			</div>
+		  </div> <br> <br> <br>
+
+		  <div class="tile">
+			<img src="../Images/argentina.jpg" />
+			<div class="content">
+			  <h2>Argentina football team</h2>
+			  <p>
+				The Argentina national football team, also known as the Albiceleste, is one of the most successful and prestigious teams in international football. With a rich history spanning over a century, the team has won numerous titles and produced some of the greatest players to ever grace the game, including Lionel Messi, Diego Maradona, and Gabriel Batistuta. The team is known for its passionate and dedicated fanbase, who have supported the team through both triumphs and setbacks. The Albiceleste has been a major contender in international competitions, having won two FIFA World Cup titles and multiple Copa America titles. The team's style of play is characterized by creativity, technical ability, and a never-say-die attitude, making them a force to be reckoned with on the global stage.
+			  </p>
+			</div>
+		  </div> <br> <br> <br>
+
+		  <div class="tile">
+			<img src="../Images/france.jpg" />
+			<div class="content">
+			  <h2>France football team</h2>
+			  <p>
+				The France national football team, commonly known as Les Bleus, is one of the most successful teams in international football history. The team has a rich footballing culture, boasting a long history of producing world-class players such as Zinedine Zidane, Michel Platini, and Thierry Henry. Les Bleus have won numerous titles, including two FIFA World Cups, two UEFA European Championships, and the FIFA Confederations Cup. The team's success is built upon a solid foundation of strong tactical discipline and a focus on teamwork, combined with the flair and creativity of their star players. The French team is known for its dynamic style of play, characterized by skillful dribbling, quick passing, and precise movement on the field. With a passionate and dedicated fan base, Les Bleus continue to be a major force in international football and a team to watch in major competitions.
+			  </p>
+			</div>
+		  </div> <br> <br> <br>
+
+		  <div class="tile">
+			<img src="../Images/spain.jpg" />
+			<div class="content">
+			  <h2>Spain football team</h2>
+			  <P>
+				The Spain national football team, commonly referred to as La Roja, is one of the most successful teams in international football, having won numerous titles and accolades. The team has a rich history of producing some of the most technically gifted players in the game, including Andres Iniesta, Xavi, and Sergio Ramos. La Roja has won multiple FIFA World Cups, UEFA European Championships, and the FIFA Confederations Cup. The team's style of play is characterized by a fluid passing game and excellent ball control, known as tiki-taka, which has become synonymous with Spanish football. The Spanish team has built a reputation for its tactical astuteness, disciplined defending, and creative attacking, making them one of the most respected and feared teams in the world. With a dedicated fan base and a strong history of success, La Roja remains a major force in international football and a team to watch in major competitions.
+			  </P>
+			</div>
+		  </div> <br> <br> <br>
+
+		  <h1> Club Football</h1>
+		  <div class="tile">
+			<img src="../Images/madrid.jpg" />
+			<div class="content">
+				<h2 id="Realmadrid">Real madrid</h2>
+			  <p>
+				Real Madrid Football Club, also known as Los Blancos, is one of the most iconic and
+				 successful football clubs in the world. Founded in 1902, the club is based in Madrid,
+				  Spain and has a rich history of winning trophies and producing some of the world's 
+				  greatest players. With a record 14 UEFA Champions League titles and 35 La Liga 
+				 championships, Real Madrid has created its status as one of the most dominant
+				football clubs in history. The club boasts a star-studded squad of world-class
+				players, including the likes of cristiano Ronaldo,Karim Benzema and Sergio Ramos,
+				 and plays its home matches at the historic Santiago Bernabéu Stadium.
+				  Whether you're a die-hard fan or simply appreciate the beautiful game,
+				  Real Madrid is a football club that commands respect and admiration 
+				   from fans all over the world. 
+			</div>
+		  </div>
+		  <br>
+				<div class="iframes-container"> 
+					<iframe width="100%" height="352" src="https://www.youtube.com/embed/M6b1Yc3vbUs" title="Real Madrid ● Road to Victory UCL 2022 | 14th European Cup Title" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		            <br>
+				</div><br>
+			
+				<br><br>
+				
+				<div class="tile">
+					<img src="../Images/bayern.jpg" />
+					<div class="content">
+						<h2 id="Bayernmunich">Bayern Munich</h2>
+						<P>
+							Bayern Munich Football Club, also known as FC Bayern, is a German professional 
+							football club based in Munich. Founded in 1900, the club has established itself
+							 as one of the most successful and popular clubs in the world. With 31 Bundesliga
+							  titles, 20 DFB-Pokal cups, and 6 UEFA Champions League trophies, Bayern Munich
+							   is one of the most decorated clubs in European football history. 
+							   The team plays its home matches at the Allianz Arena, a state-of-the-art
+								stadium that can hold over 75,000 fans. The club has produced some of the 
+								game's greatest players, such as Franz Beckenbauer, Gerd Muller, and more
+								 recently, Robert Lewandowski. Bayern Munich is known for its attacking style
+								  of play and is renowned for producing some of the most exciting and 
+								  entertaining football matches. Whether you are a die-hard fan or simply 
+								  a lover of the beautiful game, Bayern Munich is a club that is impossible to 
+								  
+								  ignore.
+						</P>
+					</div>
+				  </div>
+				<div>
+					<iframe width="100%" height="352" src="https://www.youtube.com/embed/lGMpbAT-yUo" title="When FC Bayern won the Champions League in 2019/20" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+					<br>
+				</div>
+				<br>
+				<h2 id="acmilan">Ac Milan</h2>
+				<div class="tile">
+					<img src="../Images/ac milan.webp" />
+					<div class="content">
+					  <h2>Ac Milan</h2>
+					  <P>
+						AC Milan Football Club, also known as the Rossoneri, is an Italian professional football 
+						club based in Milan. The club was founded in 1899 and has established itself as one of
+						 the most successful clubs in Italy and Europe. With 18 Serie A titles, 5 UEFA Champions
+						  League trophies, and 7 Coppa Italia cups, AC Milan has a rich history of winning and
+						   has produced some of the game's greatest players, such as Paolo Maldini, 
+						   Franco Baresi, and Andriy Shevchenko. The team plays its home matches at the
+							San Siro Stadium, a historic stadium that can hold over 80,000 fans. 
+							AC Milan is known for its stylish and attacking brand of football and is admired 
+							for its passionate fan base, known as the Rossoneri. Whether you are a fan of 
+							Italian football or simply appreciate the beautiful game, AC Milan is a club that
+							 cannot be ignored.
+					</P>
+					</div>
+				  </div>
+				  <div>
+				<iframe width="100%" height="352" src="https://www.youtube.com/embed/cptdjJNQI2o" title="AC Milan ● Road to The Champions League Final 2006/2007" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+				
+		        </div><br><br>
+		
+					<h2 id="Barcelona">Barcelona</h2>
+					<div class="tile">
+						<img src="../Images/barcelona.jpg" />
+						<div class="content">
+						  <h2>Barcelona</h2>
+						  <P>
+							Barcelona Football Club, also known as Barça, is a Spanish professional football
+							 club based in Barcelona. The club was founded in 1899 and has established itself 
+							 as one of the most successful clubs in the world. With 26 La Liga titles, 
+							 5 UEFA Champions League trophies, and numerous other domestic and international
+							  honours, Barcelona is known for its attractive, possession-based style of play
+							   and has produced some of the game's greatest players, including Lionel Messi,
+								Xavi Hernandez, and Andres Iniesta. The team plays its home matches at the 
+								Camp Nou stadium, which can hold over 99,000 fans, making it the
+								 largest stadium in Europe. The club is admired not just for its success
+								  on the pitch but also for its strong commitment to social causes and
+								   its promotion of Catalan identity. Whether you are a fan of the club
+									or simply a lover of the beautiful game, Barcelona is a club that
+									 inspires passion and admiration around the world
+						</P>
+						</div>
+					  </div>
+				
+				<br><br>
+
+
+				<h2 id="Liverpool">Liverpool</h2>
+				<div class="tile">
+					<img src="../Images/liverpool.jpeg" />
+					<div class="content">
+					 
+						<P>
+							Liverpool Football Club, also known as the Reds, is an English professional football 
+							club based in Liverpool. Founded in 1892, the club has a rich history of success and 
+							has established itself as one of the most iconic and beloved clubs in the world. 
+							With 19 English League titles, 7 FA Cup wins, 8 League Cup wins, and 6 UEFA Champions
+							 League titles, Liverpool has a proud tradition of winning and has produced some 
+							 of the game's most legendary players, including Steven Gerrard, Kenny Dalglish,
+							  and Ian Rush. The team plays its home matches at Anfield, a historic stadium
+							   that can hold over 53,000 fans. Liverpool is known for its passionate and
+							    loyal fan base, who are affectionately known as the Kop, and for its high-energy,
+								 attacking style of play. Whether you are a lifelong fan or simply appreciate
+								  the beauty of the game, Liverpool is a club that captures the heart and
+								   imagination of football fans around the world.
+						</P>
+					</div>
+				</div>
+				<h2 id="Manchesterunited">Manchester United</h2>	
+				<div class="tile">
+					<img src="../Images/manutd.jpg" />
+					<div class="content">
+					  <h2>Big Ben</h2>
+					  <P>
+						Manchester United Football Club, also known as the Red Devils, is an English professional
+						 football club based in Manchester. Founded in 1878, the club has a rich history of success 
+						 and has established itself as one of the most popular and successful football clubs
+						  in the world. With a record 20 English League titles, 12 FA Cup wins, 3 European 
+						  Cup/UEFA Champions League titles, and numerous other domestic and international honours,
+						   Manchester United has produced some of the game's greatest players, 
+						   including George Best, Bobby Charlton, and Cristiano Ronaldo. 
+						   The team plays its home matches at Old Trafford, a legendary stadium that can
+							hold over 75,000 fans. Manchester United is known for its passionate and loyal 
+							fan base, who are affectionately known as the Red Army, and for its never-say-die 
+							attitude on the pitch. Whether you are a lifelong fan or simply appreciate the 
+							beauty of the game, Manchester United is a club that inspires passion and admiration
+							 around the world.
+					</P>
+					</div>
+				  </div>	
+				<div>
+					
+				    <iframe width="100%" height="352" src="https://www.youtube.com/embed/CR1We5xXfGA" title="UNITED: The Path to Glory" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+				</div>
+			</div>
+</svg>
+</div></div>
+			<button class="buttonf1" onclick="topFunction()" id="scroll" title="Go to top">Top</button>
+						
+			<script>
+			let mybutton = document.getElementById("scroll");
+
+			window.onscroll = function() {scrollFunction()};
+			
+			function scrollFunction() {
+				if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+				mybutton.style.display = "block";
+				} else {
+				mybutton.style.display = "none";
+				}
+			}
+			function topFunction() {
+				document.body.scrollTop = 0;
+				document.documentElement.scrollTop = 0;
+			}
+			</script>
+<footer>
+	<div class="grid-footer">
+		<div>
+			<img class="icon_footer" src="../Images/ICON_a.png" alt="Logo">
+			<div class="footer-about">
+				<h3>About Us</h3>
+				<p>Welcome to SportATTIC website! We are a team of students who have come together to create a platform for
+					sports. Our website contains content about several sports, a shop for sports items and many more. 
+					Thank you for visiting our website and we hope you enjoy our content!
+				</p>
+			</div>
+			<div class="Main_editor">
+				<div class="footer-editor">
+					<h3>Page created by <a class="editor" href="pageeditor1.html">R.L.V Gunawardhana</a></h3>
+					<h3> &#169 SportATTIC 2023 | All rights resevered</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+ </footer>
+ 
+</body>
+</html>

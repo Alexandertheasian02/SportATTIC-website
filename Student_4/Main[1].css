@@ -1,0 +1,784 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*-------------------------------Splash Screen----------------------------------*/
+.main {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: #000;
+    color: white;
+}
+.header {
+    font-size: 60px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    padding-left: 500px;
+    padding-top: 150px;
+}
+
+.titles {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,50%);
+}
+
+h1 {
+    font-weight: 500;
+    font-size: 200px;
+    position:absolute;
+    transform: translate(-50%,50%);
+}
+
+/*-------------------------------Main Page styling----------------------------------*/
+
+.selected{
+	background-color: #ffffff;
+	color: black;
+}
+
+
+nav{
+    display: flex;
+    justify-content: space-between;
+	align-items: center;
+    background-color: rgba(0,0,0,0.5);
+	width:100%;
+    font-family: 'Audiowide', cursive;
+    /* Navbar styling*/
+}
+
+
+#MainpVideo {
+    right: 0;
+    bottom: 0;
+    width:100%; 
+    z-index: -1;
+  }
+
+.icon{
+	width:200px;
+    height: 200px;
+}
+
+.mainh2{
+    font-weight: 500;
+    font-size: 200px;
+    position:absolute;
+    transform: translate(-50%,50%);
+}
+
+nav ul {
+
+	 margin-right:400px;
+
+}
+nav ul li{
+	display:inline-block;
+	line-height:80px;
+	margin:0 5px;
+}
+
+nav ul li a{
+    font-family : 'Audiowide';
+	color:white;
+	font-size:17px;
+	padding:10px 20px;
+	border-radius:40px;
+	font-weight:520;
+	text-transform:uppercase;
+	transition: 1s;
+    text-decoration: none;
+    /* Navbar content styling*/
+}
+
+nav ul li a:hover {
+    background-color: #fff;
+    color: black
+}
+
+.active_1 {
+    background-color: #de2828;
+}
+
+
+.buttons{
+    width: 100%;
+    position: absolute;
+    top: 120%;
+    text-align: center;
+    color: white;
+}
+
+.img{
+    max-width: 100%;
+    height: auto
+}
+
+.grid-container{
+    display: inline-grid;
+    grid-template-columns: auto auto;
+    width: 100%;
+    height: 100%;
+    gap: 20px;
+	padding: 100px;
+    background-color: darkslategrey;
+    /*Content styling*/
+}
+
+.grid-container a {
+	text-decoration: none;
+    text-align: center;
+}
+
+#cricket,
+#badminton,
+#tennis,
+#football {
+	transition: 0.2s;
+	width: 400px;
+	height: 400px;
+    overflow: hidden;
+}
+
+#cricket:hover,
+#badminton:hover,
+#tennis:hover,
+#football:hover {
+	transform: scale(1.05);
+}
+
+/*----------------------------Shop Styling----------------------------*/
+
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+height: 15px;
+width: 15px;
+margin: 0 2px;
+background-color: #de2828;
+border-radius: 50%;
+display: inline-block;
+transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+  
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+/*For the shop body*/
+.shop {
+    background-image: url(../Images/Shopback.jpg);
+    color: #fff;
+}
+
+/*Quote*/
+.head {
+    font-size: 5em;
+    text-align: center;
+}
+
+.btn {
+    text-align: center;
+    vertical-align: middle;
+    padding: .67em .67em;
+    cursor: pointer;
+}
+
+.btn-primary {
+    color: black;
+    background-color: #de2828;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+/*Hovering effect*/
+.btn-primary:hover {
+    background-color:   #eec50e;
+}
+
+.content-section {
+    margin: 1em;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1.5em;
+}
+.section-header {
+    font-weight: normal;
+    color: white;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.shop-item {
+    margin: 30px;
+}
+
+.shop-item-title {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.shop-item-image {
+    height: 250px;
+}
+
+.shop-item-details {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.shop-item-price {
+    flex-grow: 1;
+    color:white;
+}
+
+.shop-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.cart-header {
+    font-weight: bold;
+    font-size: 1.25em;
+    color: white;
+}
+
+.cart-column {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #de2828;
+    margin-right: 1.5em;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.cart-row {
+    display: flex;
+}
+
+.cart-item {
+    width: 45%;
+}
+
+.cart-price {
+    width: 20%;
+    font-size: 1.2em;
+    color: white;
+}
+
+.cart-quantity {
+    width: 35%;
+}
+
+.cart-item-title {
+    color: white;
+    margin-left: .5em;
+    font-size: 1.2em;
+}
+
+.cart-item-image {
+    width: 75px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.cart-quantity-input {
+    height: 34px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid #de2828;
+    background-color:white;
+    color: black;
+    padding: 0;
+    text-align: center;
+    font-size: 1.2em;
+    margin-right: 25px;
+}
+
+.cart-row:last-child {
+    border-bottom: 1px solid #de2828;
+}
+
+.cart-row:last-child .cart-column {
+    border: none;
+}
+
+.cart-total {
+    text-align: end;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.cart-total-title {
+    font-weight: bold;
+    font-size: 1.5em;
+    color:white;
+    margin-right: 20px;
+}
+
+.cart-total-price {
+    color: white;
+    font-size: 1.1em;
+}
+
+.btn-checkout {
+    display: block;
+    margin: 40px auto 80px auto;
+    font-size: 1.75em;
+}
+
+.btn-danger {
+    color: black;
+    background-color: #de2828;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+
+.btn-danger:hover {
+    background-color:  #eec50e;
+}
+
+/*------------------------------Payment Styling------------------------------*/
+.logopay{
+    Padding:30px;
+    height:300px;
+    width: 300px;
+}
+
+.payhead{
+    margin-top: 10px;
+    text-align: center;
+}
+
+.formpay{
+    color: black;
+    margin-top: 20px;
+    margin-left: 32%;
+}
+
+
+input {
+    display: block;
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #e44545;
+    transition: background-color 0.3s ease-in-out;
+}
+
+input:focus {
+background-color: white;
+}
+
+.buttons-signup{
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    color: black;
+    padding-right: 75px;
+}
+
+.button{
+    width: 200px;
+    padding: 15px;
+    border: 2px solid  #de2828;
+    border-radius: 25px;
+    margin: 20px 10px; 
+    font-weight: bold;
+    color: black;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.paycon{
+    background:#de2828;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: 0.3s;
+}
+
+.button:hover .paycon{
+    width: 100%;
+    z-index: -1;
+}
+
+.button:hover{
+    border: none;
+}
+
+#myVideo{
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+
+#totalpay{
+    text-align: center;
+}
+
+#cardpayment{
+    height: 25%;
+    width: 35%;
+}
+
+/*------------------------------Comment Form Styling------------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    color: #fff;
+}
+.comment{
+    display: flex;
+    min-height: 110vh;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: url(./Images/comment_bg.jpg);
+    background-size: cover;
+}
+.forum{
+    width:720px;
+    background:rgba(0,0,0,0.5);
+    box-shadow: 0 0 8px rgba(250, 250, 250, 0);
+    border-style: solid;
+    margin-top: 260px;
+}
+label{
+    display: inline;
+    color: white;
+    font-size: 16px;
+    margin-right: 18px;
+}
+
+
+#email{
+    margin-left: 50px;
+}
+.comment_p{
+    border-radius: 5px;
+    border:whitesmoke;
+    border-style: solid;
+    padding: 20px;
+    font-size: 15px;
+    color: white;
+}
+.comment_h2{
+    margin-bottom: 40px;
+}
+
+.forum form{
+    width:100%;
+    text-align: center;
+    padding: 25px 20px;
+}
+form h1{
+    padding: 10px 0;
+    color: #de2828;  
+}
+form .details{
+    position: relative; 
+    padding: 15px;   
+}
+form input{
+    width: 70%;
+    display: inline;
+    height:50px ;
+    margin: 4px 0;
+    border: 1px solid #5c5c55;
+    border-radius: 3px;
+    background: white;
+    padding: 25px 15px;
+    padding-right:45px; 
+    font-size: 16px;
+}
+form textarea{
+    padding: 5px 15px;
+    border: 1px solid #5c5c55;
+    border-radius: 3px;
+    background:white;
+    padding: 0 15px;
+    font-size: 20px;
+    width: 100%;
+    margin: 10px 0;
+    margin-top: 30px;
+}
+ .buttons-submit{
+    margin-top:15px ;
+    border: none;
+    background: crimson;
+    color: #222;
+    padding:10px 0;
+    display: inline;
+    width: 50%;
+    font-size: 20px;
+    font-weight: 800;
+    cursor: pointer;
+    border-radius: 40px;
+ }
+
+ .buttons-comment{
+    margin-top:5px ;
+    border: none;
+    background: white;
+    color: #222;
+    padding:10px 0;
+    display: inline;
+    width: 48%;
+    font-size: 20px;
+    font-weight: 800;
+    cursor: pointer;
+    border-radius: 3px;
+ }
+form input:focus,
+form textarea:focus{
+    font-size: 15px;
+    border: 3px solid crimson ;
+    color:black;
+    transition: all 0.3s ease;
+}
+
+form input:focus::placeholder,
+form textarea:focus::placeholder{
+    font-size: 20px;
+    color: rgb(65, 65, 241);
+    transition: all 0.3s ease;
+}
+
+buttons-submit :hover{
+    border:none;
+}
+
+buttons-comment :hover{
+    border:none;
+}
+
+.grid-footer{
+    background-color: #8e0000;
+}
+.icon_footer{
+    width: 20%;
+}
+
+.grid-footer{
+    display: inline-grid;
+    grid-template-columns: auto auto;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+	padding: 35px;
+
+}
+
+.h3-address{
+    margin:0 ;
+}
+.h3-editor{
+    margin-top: 300px ;
+}
+
+.Main_editor{
+    margin:0 ;
+}
+.footer-address{
+    margin: 0;
+}
+.footer-about{
+    display: initial;
+    border-color: #ffffff;
+    border-style: solid;
+    position: absolute;
+    padding: 15px;
+    top: 1870px;
+}
+
+.p-about{
+    margin: 0;
+}
+
+.imgf {
+    background-image: none;
+    object-fit: cover;
+}
+
+.headerf {
+	background-color: #003060;
+	color: #fff;
+}
+
+.navf ul {
+	
+    width: 90%;
+    margin: auto;
+    padding: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navf li {
+    list-style: none;
+    display: inline-block;
+    margin: 20px;
+    align-items: center;
+    position: relative;
+}
+
+
+.navf li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none; 
+    text-transform: uppercase;
+
+}
+
+.navf li a:hover {
+    background-color: #290baf;
+
+}
+
+.mainf {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+.section {
+	margin-bottom: 40px;
+}
+
+.h1f, .h2f, .h3f {
+	font-family: Arial, sans-serif;
+}
+.h4f{ 
+    font-size: 40px;
+}
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.lif {
+	margin-bottom: 20px;
+}
+
+.imgfbig{
+    max-width: 100%;
+    height: auto
+    
+}
+.home{
+    width: 100%;
+    background-image: url(bg.jpg);
+    background-size: cover;
+}
+.buttonf1 {
+    margin-right: 100px;
+    background-color: rgb(24, 19, 15);
+    color: aliceblue;
+    border: none;
+    height: 65px;
+    width: 135px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 20px;
+    margin-left: 40px;
+    vertical-align: top;
+    transition: opacity 0.15s;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    font-weight: bold;
+}
+.buttonf1:hover{
+    opacity: 0.7;
+}
+.buttonf1:active {
+    background-color: rgb(11, 19, 19);
+}
+.pf {
+    font-size: 20px;
+}
+
+.bf {
+    font-size: 20px;
+}
+
+.circle-map {
+    fill: #abb4e3;
+    stroke: #b39898;
+    stroke-width: 2;
+    background-color: #7a3939;
+}
+
+.text-map {
+    font-size: 18px;
+    text-anchor: middle;   
+    font-family: Arial;
+}
+
+.circle-map:hover {
+    fill: #2b1f1f;
+    cursor: pointer;
+}
+
+

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <link rel="icon" href="../Images/ICON_b.png" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="qna.css" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+ 
+  </head>
+  <body>
+    <!--==================== NAVIGATION ====================-->
+    <nav>
+      <a href="../Student_2/Mainpage.html">
+        <img class="icon" src="../Images/ICON_a.png" alt="Logo" />
+      </a>
+      <ul id="navlist">
+        <li><a href="../Student_2/Mainpage.html">Home</a></li>
+        <li><a href="../Student_2/Comment_Form.html">Comments</a></li>
+        <li><a href="../Student_1/Shop.html">Shop</a></li>
+        <li><a class="active_1" href="qna.html">Quiz</a></li>
+        <li><a href="../Student_4/sitemap.html">Site Map</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="../Student_4/sports2.html">Gallery</a></li>
+      </ul>
+    </nav>
+    <!--  above line represents navigation bar -->
+    <!--main heading-->
+    <div class="main">
+      <div class="main-section">
+        <h2>Quiz App</h2>
+      </div>
+
+      <!--starting section-->
+      <div class="start-section-wrapper">
+        <div class="start-section">
+          <div class="instruction-section">
+            <h3>Instructions</h3>
+            <ul>
+              <li>Select the correct answer from the given four answers</li>
+              <li>Only one chance will be given per question</li>
+              <li>Need to answer all questions within 3 minutes</li>
+            </ul>
+          </div>
+          <button id="startBtn" class="btn button1">Start Quiz</button>
+        </div>
+      </div>
+
+      <!--stats section-->
+      <div class="stat-section-wrapper">
+        <div class="stat-section">
+          <div class="row-container">
+            <h3>
+              Questions - <span id="currentQuestionNum"></span> /
+              <span id="totalQuestions"></span>
+            </h3>
+          </div>
+          <div class="row-container">
+            <h3>Time Limit - <span id="timeLeft"></span>s</h3>
+          </div>
+        </div>
+      </div>
+
+      <!--qna section-->
+      <div class="qna-section__wrapper">
+        <div class="qna-section">
+          <div class="question-area">
+            <h3 id="currentQuestion"></h3>
+          </div>
+
+          <div class="answers-area">
+            <div class="row-container">
+              <button id="answer1" class="btn button2"></button>
+              <button id="answer2" class="btn button2"></button>
+            </div>
+            <div class="row-container">
+              <button id="answer3" class="btn button2"></button>
+              <button id="answer4" class="btn button2"></button>
+            </div>
+          </div>
+
+          <div class="control-area">
+            <div class="row-container">
+              <button id="nextQBtn" class="btn button1">Next Question</button>
+            </div>
+          </div>
+
+          <div class="immediate-res-area">
+            <div class="row-container">
+              <h4 id="imResult"></h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--results section-->
+      <div class="result-section__wrapper">
+        <div class="result-section">
+          <h3>Congratulations Quiz Completed!</h3>
+          <div class="results-wrapper">
+            <p>Questions <span id="questionCount"></span></p>
+            <br />
+            <p>Wrong Answers <span id="wrongNum"></span></p>
+            <br />
+            <p>Score <span id="correctNum"></span></p>
+            <br />
+            <p>Time Taken <span id="timeElapsed"></span>s</p>
+            <br />
+            <p id="feedback"></p>
+          </div>
+          <button id="closeBtn" class="btn button1">Close</button>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="grid-footer">
+        <div>
+          <img
+            class="icon_footer"
+            src="../Images/ICON_a.png"
+            alt="Logo"
+          />
+          <div class="footer-about">
+            <h3>About Us</h3>
+            <p>
+              Welcome to SportATTIC website! We are a team of students who have
+              come together to create a platform for sports. Our website
+              contains content about several sports, a shop for sports items and
+              many more. Thank you for visiting our website and we hope you
+              enjoy our content!
+            </p>
+          </div>
+          <div class="Main_editor">
+            <div class="footer-editor">
+              <h3>
+                Page created by
+                <a class="editor" href="editor.html">B.K.D.S. Rodrigo</a>
+              </h3>
+             <h3>&#169 SportATTIC 2023|All rights reserved</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="qna.js"></script>
+  
+</html>

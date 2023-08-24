@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <link rel="icon" href="../Images/ICON_b.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+ 
+    
+
+    <!--==================== CSS ====================-->
+    <link rel="stylesheet" href="main.css" />
+     <style>
+   * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    color: white;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #000000;
+    font-family: "Poppins", sans-serif;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 150px !important;
+    align-items: center;
+}
+
+.title {
+    font-size: 80px;
+    float: left;
+    margin: 0 auto;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+#topButton {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color:darkgreen;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+#topButton:hover {
+    background-color: #555;
+}
+
+/*==================== REUSABLE CSS CLASSES ====================*/
+.section {
+    padding: 2rem 0 4rem;
+    margin-bottom: 40px;
+    align-items: center;
+}
+
+.section-title {
+    font-size: 36px;
+    color: white;
+    text-align: center;
+}
+
+/*==================== HOME ====================*/
+
+.home-section {
+    border-bottom: 1px solid white;
+    margin-bottom: 40px;
+}
+
+.editor {
+    margin-top: 40px;
+    font-size: 18px;
+    width: 100%;
+    text-align: center;
+}
+
+.editor>a:hover {
+    color: gold;
+}
+
+.home-container {
+    margin-bottom: 40px;
+}
+
+.home-menu li a:hover {
+    color: gold;
+}
+
+/*==================== INTRODUCTION ====================*/
+
+.introduction {
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    max-width: 1100px;
+    align-items: center;
+}
+
+.about-img-container {
+    flex: 50%;
+}
+
+.about__data {
+    flex: 50%;
+    padding-left: 40px;
+}
+
+.about__img {
+    width: 100%;
+    border-radius: 0.5rem;
+    justify-self: center;
+    align-items: center;
+}
+
+.about__description {
+    text-align: left;
+}
+
+@media (max-width: 800px) {
+    .about-img-container, .about__data {
+        flex: 100%
+    }
+    .about__data {
+        padding-left: 0px;
+    }
+}
+
+/*==================== TOURNAMENTS ====================*/
+.timeline-container {
+    width: 90%;
+    max-width: 1080px;
+    margin: 0 auto;
+    background: #2b343a;
+    padding: 0 10%;
+    border-radius: 10px;
+}
+
+.timeline-container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* -------------------------------- 
+  
+  Main components 
+  
+  -------------------------------- */
+
+#timeline {
+    position: relative;
+    padding: 2em 0;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+#timeline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 25px;
+    height: 100%;
+    width: 4px;
+    background: cyan;
+}
+
+@media only screen and (min-width: 1170px) {
+    #timeline {
+        margin-top: 3em;
+        margin-bottom: 3em;
+    }
+
+    #timeline::before {
+        left: 50%;
+        margin-left: -2px;
+    }
+}
+
+.timeline-block {
+    position: relative;
+    margin: 2em 0;
+}
+
+.timeline-block:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.timeline-block:first-child {
+    margin-top: 0;
+}
+
+.timeline-block:last-child {
+    margin-bottom: 0;
+}
+
+@media only screen and (min-width: 1170px) {
+    .timeline-block {
+        margin: 4em 0;
+    }
+
+    .timeline-block:first-child {
+        margin-top: 0;
+    }
+
+    .timeline-block:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.timeline-img {
+    position: absolute;
+    top: 8px;
+    left: 12px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.timeline-img {
+    background: cyan;
+}
+
+@media only screen and (min-width: 1170px) {
+    .timeline-img {
+        width: 30px;
+        height: 30px;
+        left: 50%;
+        margin-left: -15px;
+        margin-top: 15px;
+    }
+}
+
+.timeline-content {
+    position: relative;
+    margin-left: 60px;
+    margin-right: 30px;
+    background: #333c42;
+    border-radius: 2px;
+    padding: 1em;
+}
+
+.timeline-content:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.timeline-content h2 {
+    color: rgba(255, 255, 255, 0.9);
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.timeline-content p,
+.timeline-content .date {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 13px;
+    font-size: 0.8125rem;
+}
+
+.timeline-content .date {
+    display: inline-block;
+}
+
+.timeline-content p {
+    margin: 1em 0;
+    line-height: 1.6;
+}
+
+.timeline-content::before {
+    content: "";
+    position: absolute;
+    top: 16px;
+    right: 100%;
+    height: 0;
+    width: 0;
+    border: 7px solid transparent;
+    border-right: 7px solid #333c42;
+}
+
+.uil-calendar-alt {
+    color: #FFFFFFAA;
+    padding: 2px;
+}
+
+@media only screen and (min-width: 768px) {
+    .timeline-content h2 {
+        font-size: 20px;
+        font-size: 1.25rem;
+    }
+
+    .timeline-content p {
+        font-size: 16px;
+        font-size: 1rem;
+    }
+
+    .timeline-content .read-more,
+    .timeline-content .date {
+        font-size: 14px;
+        font-size: 0.875rem;
+    }
+}
+
+@media only screen and (min-width: 1170px) {
+    .timeline-content {
+        color: white;
+        margin-left: 0;
+        padding: 1.6em;
+        width: 36%;
+        margin: 0 5%;
+    }
+
+    .timeline-content::before {
+        top: 24px;
+        left: 100%;
+        border-color: transparent;
+        border-left-color: #333c42;
+    }
+
+    .timeline-content .date {
+        position: absolute;
+        width: 100%;
+        left: 140%;
+        top: 24px;
+        font-size: 16px;
+        font-size: 1rem;
+    }
+
+    .timeline-block:nth-child(even) .timeline-content {
+        float: right;
+    }
+
+    .timeline-block:nth-child(even) .timeline-content::before {
+        top: 24px;
+        left: auto;
+        right: 100%;
+        border-color: transparent;
+        border-right-color: #333c42;
+    }
+
+    .timeline-block:nth-child(even) .timeline-content .read-more {
+        float: right;
+    }
+
+    .timeline-block:nth-child(even) .timeline-content .date {
+        left: auto;
+        right: 140%;
+        text-align: right;
+    }
+}
+
+/*==================== PLAYERS ====================*/
+
+.horizontal-list {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    background-color: #333c42;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    margin: 10px;
+}
+
+.player_title {
+    text-align: center;
+    padding-bottom: 10px;
+    color:yellow;
+}
+
+.card img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.card p:first-of-type {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+}
+
+.card p:last-of-type {
+    margin-top: 5px;
+    font-size: 1rem;
+    font-weight: normal;
+    color: gold;
+}
+    </style>
+
+    <title>Content</title>
+  </head>
+  <body>
+    <!--==================== NAVIGATION ====================-->
+    <nav>
+      <a href="../Student_2/Mainpage.html">
+        <img class="icon" src="../Images/ICON_a.png" alt="Logo" />
+      </a>
+      <ul id="navlist">
+        <li><a href="../Student_2/Mainpage.html">Home</a></li>
+        <li><a href="../Student_2/Comment_Form.html">Comments</a></li>
+        <li><a href="../Student_1/Shop.html">Shop</a></li>
+        <li><a href="qna.html">Quiz</a></li>
+        <li><a href="../Student_4/sitemap.html">Site Map</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="../Student_4/sports2.html">Gallery</a></li>
+      </ul>
+    </nav>
+    <!--  above lines represent navigation bar -->
+
+    <!--==================== MAIN ====================-->
+    <button onclick="topFunction()" id="topButton" title="Go to top">
+      Top
+    </button>
+    <main class="main">
+      <div class="title">Tennis</div>
+      <!--==================== HOME ====================-->
+
+      <section class="home-section">
+        <div class="home-container">
+          <div class="editor">
+            <a href="editor.html">Editor</a>
+          </div>
+          <br />
+
+          <div class="home-menu">
+            <ol>
+              <li><a href="#introduction">Introduction</a></li>
+              <li><a href="#tournaments">Tournaments</a></li>
+              <li><a href="#players">Famous Tennis Players</a></li>
+            </ol>
+          </div>
+        </div>
+      </section>
+      <!--==================== INTRODUCTION ====================-->
+      <h2 class="section-title">Introduction</h2>
+      <section class="introduction" id="introduction">
+        <div class="about-img-container">
+          <img
+            src="../Images/tennis Ground.jpg"
+            alt=""
+            class="about__img"
+          />
+        </div>
+        <div class="about__data">
+          <p class="about__description">
+            Tennis is a popular sport played individually or in doubles with a
+            racket and ball. The objective is to hit the ball over the net and
+            within the opponent's side of the court. It is a physically
+            demanding sport that requires speed, agility, and endurance.
+            Professional tennis players compete in tournaments throughout the
+            year, with the Grand Slam events considered the most prestigious.
+            Tennis is also enjoyed as a recreational activity, and tennis clubs
+            and facilities are found in many communities around the world.
+            Overall, tennis is a dynamic and exciting sport with a rich history
+            and a bright future.
+          </p>
+        </div>
+      </section>
+
+      <!--==================== TOURNAMENTS ====================-->
+      <h2 class="section-title" id="tournaments">Tournaments</h2>
+      <section id="timeline" class="timeline-container">
+        <div class="timeline-block">
+          <div class="timeline-img"></div>
+
+          <div class="timeline-content">
+            <h2>Wimbledon</h2>
+            <p>London, England</p>
+            <span class="date"
+              ><i class="uil uil-calendar-alt"></i>1877 - Present</span
+            >
+          </div>
+          <!-- timeline-content -->
+        </div>
+        <!-- timeline-block -->
+
+        <div class="timeline-block">
+          <div class="timeline-img"></div>
+          <!-- timeline-img -->
+
+          <div class="timeline-content">
+            <h2>US Open</h2>
+            <p>New York, USA</p>
+            <span class="date"
+              ><i class="uil uil-calendar-alt"></i>1881 - Present</span
+            >
+          </div>
+          <!-- timeline-content -->
+        </div>
+        <!-- timeline-block -->
+
+        <div class="timeline-block">
+          <div class="timeline-img"></div>
+          <!-- timeline-img -->
+
+          <div class="timeline-content">
+            <h2>French Open</h2>
+            <p>Paris, France</p>
+            <span class="date"
+              ><i class="uil uil-calendar-alt"></i>1891 - Present</span
+            >
+          </div>
+          <!-- timeline-content -->
+        </div>
+        <!-- timeline-block -->
+
+        <div class="timeline-block">
+          <div class="timeline-img"></div>
+          <!-- timeline-img -->
+
+          <div class="timeline-content">
+            <h2>Olympic Games</h2>
+            <p>International Tennis Federation</p>
+            <span class="date"
+              ><i class="uil uil-calendar-alt"></i>1896 - Present</span
+            >
+          </div>
+          <!-- timeline-content -->
+        </div>
+        <!-- timeline-block -->
+
+        <div class="timeline-block">
+          <div class="timeline-img"></div>
+          <!-- timeline-img -->
+
+          <div class="timeline-content">
+            <h2>Davis Cup</h2>
+            <p>International Tennis Federation</p>
+            <span class="date"
+              ><i class="uil uil-calendar-alt"></i>1900 - Present</span
+            >
+          </div>
+          <!-- timeline-content -->
+        </div>
+        <!-- timeline-block -->
+
+        <div class="timeline-block">
+          <div class="timeline-img"></div>
+          <!-- timeline-img -->
+
+          <div class="timeline-content">
+            <h2>Australian Open</h2>
+            <p>Melbourne, Australia</p>
+            <span class="date"
+              ><i class="uil uil-calendar-alt"></i>1905 - Present</span
+            >
+          </div>
+          <!-- timeline-content -->
+        </div>
+        <!-- timeline-block -->
+
+        <div class="timeline-block">
+          <div class="timeline-img"></div>
+
+          <div class="timeline-content">
+            <h2>Roland Garros</h2>
+            <p>Paris, France</p>
+            <span class="date"
+              ><i class="uil uil-calendar-alt"></i>1925 - Present</span
+            >
+          </div>
+          <!-- timeline-content -->
+        </div>
+        <!-- timeline-block -->
+
+        <div class="timeline-block">
+          <div class="timeline-img"></div>
+          <!-- timeline-img -->
+
+          <div class="timeline-content">
+            <h2>Fed Cup</h2>
+            <p>International Tennis Federation</p>
+            <span class="date"
+              ><i class="uil uil-calendar-alt"></i>1963 - Present</span
+            >
+          </div>
+          <!-- timeline-content -->
+        </div>
+        <!-- timeline-block -->
+
+        <div class="timeline-block">
+          <div class="timeline-img"></div>
+          <!-- timeline-img -->
+
+          <div class="timeline-content">
+            <h2>ATP Cup</h2>
+            <p>International Tennis Federation</p>
+            <span class="date"
+              ><i class="uil uil-calendar-alt"></i>2020 - Present</span
+            >
+          </div>
+          <!-- timeline-content -->
+        </div>
+        <!-- timeline-block -->
+      </section>
+      <!-- timeline -->
+
+      <!--==================== PLAYERS ====================-->
+      <h2 class="section-title">Famous Tennis Players</h2>
+      <section id="players" class="section">
+        <ul class="horizontal-list">
+          <li>
+            <div class="card">
+              <img src="../Images/serena.jpg" alt="Serena Williams" />
+              <p>Serena Williams</p>
+              
+            </div>
+          </li>
+          <li>
+            <div class="card">
+              <img src="../Images/novak.jpg" alt="Novak Djokovic" />
+              <p>Novak Djokovic</p>
+              
+            </div>
+          </li>
+          <li>
+            <div class="card">
+              <img src="../Images/nadal.jpg" alt="Rafael Nadal" />
+              <p>Rafael Nadal</p>
+              
+            </div>
+          </li>
+          <li>
+            <div class="card">
+              <img src="../Images/roger.jpg" alt="Roger Federer" />
+              <p>Roger Federer</p>
+              
+            </div>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <div class="grid-footer">
+        <div>
+          <img
+            class="icon_footer"
+            src="../Images/ICON_a.png"
+            alt="Logo"
+          />
+          <div class="footer-about">
+            <h3>About Us</h3>
+            <p>
+              Welcome to SportATTIC website! We are a team of students who have
+              come together to create a platform for sports. Our website
+              contains content about several sports, a shop for sports items and
+              many more. Thank you for visiting our website and we hope you
+              enjoy our content!
+            </p>
+          </div>
+          <div class="Main_editor">
+            <div class="footer-editor">
+              <h3>
+                Page created by
+                <a class="editor" href="editor.html">B.K.D.S. Rodrigo</a>
+              </h3>
+             <h3>&#169 SportATTIC 2023|	All rights reserved</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!--==================== MAIN JS ====================-->
+    
+  </body>
+  <script>
+    // Get the button
+    let mybutton = document.getElementById("topButton");
+
+    // When the user scrolls down 200px from the top of the document, show the button
+    window.onscroll = function () {
+      scrollFunction();
+    };
+
+    function scrollFunction() {
+      if (
+        document.body.scrollTop > 200 ||
+        document.documentElement.scrollTop > 200
+      ) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    } 
+  </script>
+</html>

@@ -1,0 +1,174 @@
+/*----------------Style Guide-------------------
+
+Use 2 or 4 spaces to indent CSS selectors and declarations to improve readability and organization.
+
+Add comments to explain the purpose and functionality of different sections of your code.
+
+Use clear and descriptive names for selectors that are easy to understand.
+
+Use consistent naming conventions for classes, ids, and variables. This will help to 
+avoid confusion and make it easier to understand and modify the code. */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+.main {
+    padding-top: 150px !important;
+}
+
+.main-section {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 3%;
+}
+
+.start-section {
+    text-align: center;
+    border: 2px solid green;
+    border-radius: 20px;
+}
+
+.start-section-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.stat-section-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 2%;
+}
+
+.instruction-section {
+    text-align: left;
+    padding-left: 10%;
+    margin-bottom: 5%;
+}
+
+.qna-section {
+    border: 2px solid green;
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.qna-section__wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 2%;
+}
+
+.question-area {
+    padding: 1%;
+}
+
+.answers-area {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5%;
+}
+
+.control-area {
+    display: grid;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.immediate-res-area {
+    text-align: center;
+}
+
+.result-section {
+    text-align: center;
+    border: 2px solid green;
+    border-radius: 20px;
+    padding: 2%;
+}
+
+.result-section__wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.results-wrapper {
+    margin: 3%;
+}
+
+.stat-section {
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+    border: 2px solid green;
+    border-radius: 20px;
+    padding: 2%;
+    min-width: 400px;
+}
+
+.stat-section > div {
+    padding: 0 20px 0 20px;
+}
+
+.grid-container {
+    justify-content: center;
+    text-align: center;
+}
+
+.row-container {
+    text-align: center;
+    display: inline-grid;
+}
+
+.btn {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button1 {
+    background-color: black;
+    border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.button1:disabled {
+    background-color: gray;
+}
+
+.button2 {
+    background-color: black;
+    border: 2px solid #008CBA;
+}
+
+.button2:disabled {
+    background-color: gray;
+}
+
+.button2:hover {
+    background-color: #008CBA;
+    color: white;
+}
+
+
+

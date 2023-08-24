@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <title>Editor</title>
+    
+    <link rel="stylesheet" href="editor_s3.css" />
+  </head>
+  <body>
+    <main class="main">
+      <div class="editor">
+        <div class="title">Page Editor</div>
+        <hr />
+        <div class="user">
+          Name :Devanga Rodrigo  <br />
+          Role: Student 3 <br />
+          The following pages were edited by me.
+        </div>
+        <hr />
+        <div class="content">
+          <a href="about.html">About Us Page</a> <br /><br />
+          Used HTML, CSS, Javascript to create the page related to styles and
+          functions and javascript mouse event interface <br />
+          When hovering description of the Image will be displayed below the
+          image.
+
+          <br /><br />
+
+          <a href="qna.html">Quiz Page</a> <br /><br />
+         Used HTML, CSS classes for buttons and Javascript array methods to create the page <br />
+         
+
+          <br /><br />
+
+          <a href="content.html">Content Page</a> <br /><br />
+            Used HTML, CSS for the timeline, Javascript to create the page related to styles and
+          functions
+       <br />
+         
+
+          <br /><br />
+
+         
+        </div>
+      </div>
+    </main>
+  </body>
+  <script type="text/javascript">
+    var currentUrl = window.location.pathname;
+    var navbar = document.getElementsByTagName('object')[0].contentWindow;
+    window.addEventListener('load', function() {
+      navbar.postMessage({ type: "updateActiveLink", url: currentUrl }, "*");
+    });
+  </script>
+</html>

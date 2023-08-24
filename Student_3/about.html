@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <title>About Us</title>
+    <link rel="icon" href="../Images/ICON_b.png" />
+    <link rel="stylesheet" href="about.css" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+ 
+  </head>
+  <body>
+    <!--==================== NAVIGATION ====================-->
+    <nav>
+      <a href="../Student_2/Mainpage.html">
+        <img class="icon" src="../Images/ICON_a.png" alt="Logo" />
+      </a>
+      <ul id="navlist">
+        <li><a href="../Student_2/Mainpage.html">Home</a></li>
+        <li><a href="../Student_2/Comment_Form.html">Comments</a></li>
+        <li><a href="../Student_1/Shop.html">Shop</a></li>
+        <li><a href="qna.html">Quiz</a></li>
+        <li><a href="../Student_4/sitemap.html">Site Map</a></li>
+        <li><a class="active_1" href="#">About Us</a></li>
+	      <li><a href="../Student_4/gallery.html">Gallery</a></li>
+       
+      </ul>
+    </nav>
+    <!-- Above lines represents navigation bar -->
+
+    <main class="main">
+      <div class="title">Student Details</div>
+      <br />
+      <div class="gallery-wrapper">
+        <div class="column">
+          <div class="gallery">
+            <img
+              class="img"
+              id="user1"
+              src="../Images/20220469.jpg"
+              alt="User1"
+              width="600"
+              height="400"
+              onmouseover="showDetails('user1d')"
+              onmouseout="showDetailsNone('user1d')"
+            />
+            <div id="user1d" class="desc1">
+              Student 1 : <br />
+              D. Sethuge <br />
+              
+            </div>
+          </div>
+
+          <div class="gallery">
+            <img
+              class="img"
+              src="../Images/20220309.jpg"
+              alt="User2"
+              width="600"
+              height="400"
+              onmouseover="showDetails('user2d')"
+              onmouseout="showDetailsNone('user2d')"
+            />
+            <div id="user2d" class="desc2">
+              Student 2 : <br />
+              I. Ranathunga <br />
+              
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="gallery">
+            <img
+              class="img"
+              src="../Images/1234.jpeg"
+              alt="user3"
+              width="600"
+              height="400"
+              onmouseover="showDetails('user3d')"
+              onmouseout="showDetailsNone('user3d')"
+            />
+            <div id="user3d" class="desc3">
+              Student 3 : <br />
+              D. Rodrigo <br />
+              
+            </div>
+          </div>
+
+          <div class="gallery">
+            <img
+              class="img"
+              src="../Images/124853.jpg"
+              alt="user4"
+              width="600"
+              height="400"
+              onmouseover="showDetails('user4d')"
+              onmouseout="showDetailsNone('user4d')"
+            />
+            <div id="user4d" class="desc4">
+              Student 4 : <br />
+              L. Gunawardhana <br />
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="editor"><a href="editor.html">Editor</a></div>
+    </main>
+    <footer>
+      <div class="grid-footer">
+        <div>
+          <img
+            class="icon_footer"
+            src="../Images/ICON_a.png"
+            alt="Logo"
+          />
+          <div class="footer-about">
+            <h3>About Us</h3>
+            <p>
+              Welcome to SportATTIC website! We are a team of students who have
+              come together to create a platform for sports. Our website
+              contains content about several sports, a shop for sports items and
+              many more. Thank you for visiting our website and we hope you
+              enjoy our content!
+            </p>
+          </div>
+          <div class="Main_editor">
+            <div class="footer-editor">
+              <h3>
+                Page created by
+                <a class="editor" href="editor.html">B.K.D.S. Rodrigo</a>
+              </h3>
+              <h3>&#169 SportATTIC 2023|All rights reserved</h3>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function showDetails(x) {
+        var divid = document.getElementById(x);
+        divid.style.display = "block";
+      }
+
+      function showDetailsNone(x) {
+        var divid = document.getElementById(x);
+        divid.style.display = "none";
+      }
+    </script>
+  </body>
+  <script type="text/javascript">
+    var currentUrl = window.location.pathname;
+    var navbar = document.getElementsByTagName("object")[0].contentWindow;
+    window.addEventListener("load", function () {
+      navbar.postMessage({ type: "updateActiveLink", url: currentUrl }, "*");
+    });
+  </script>
+  
+</html>
