@@ -1,0 +1,48 @@
+ <!DOCTYPE html>
+ <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>INVOICE</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="checkout.css">
+        <link rel="icon" href="../Images/Titleicon.png">
+
+</head>
+<body>
+
+   <!-- invoice -->
+   <div class="invoice">
+    <div class="header">
+        <h1>SportATTIC</h1>
+        <h2>Invoice</h2>
+    </div>
+    <div class="user-details">
+        <h3>Buyer Info</h3>
+        <p>First Name: <span id="firstname"></span></p>
+        <p>Last Name: <span id="lastname"></span></p>
+        <p>Email: <span id="email"></span></p>
+        <p>Phone: <span id="phone"></span></p>
+    </div>
+    <div class="billing-info">
+        <h3>Billing Info</h3>
+        <p>Address: <span id="address"></span></p>
+        <p>Zip code: <span id="code"></span></p>
+    </div>
+    <div class="items">
+        <h3>Products</h3>
+        <div id="cartItems"></div>
+    </div>
+    <hr>
+    <div id="totalAm"></div>
+    <hr>
+    <br>
+    <span class="paid"> PAID</span>
+    <button class="goBack" onclick="myFunction()">Go Back</button>
+    <!-- printing the whole page -->
+   <button class="goBack" onclick="window.print()">Print The Invoice</button>
+    </div>
+    <script src="checkout.js"></script>
+</body>
+</html>

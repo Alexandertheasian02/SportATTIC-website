@@ -1,0 +1,571 @@
+/*----------------Style Guide-------------------
+
+ Use 2 or 4 spaces to indent CSS selectors and declarations to improve readability and organization.
+
+Add comments to explain the purpose and functionality of different sections of your code.
+
+Use clear and descriptive names for selectors that are easy to understand.
+
+Use consistent naming conventions for classes, ids, and variables. This will help to 
+avoid confusion and make it easier to understand and modify the code. */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*-------------------------------Splash Screen----------------------------------*/
+.main {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: #000;
+    color: white;
+}
+.header {
+    font-size: 60px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    padding-left: 500px;
+    padding-top: 150px;
+}
+
+.titles {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,50%);
+}
+
+h1 {
+    font-weight: 500;
+    font-size: 200px;
+    position:absolute;
+    transform: translate(-50%,50%);
+}
+
+/*-------------------------------Main Page styling----------------------------------*/
+
+.selected{
+	background-color: #ffffff;
+	color: black;
+}
+
+
+nav{
+    display: flex;
+    justify-content: space-between;
+	align-items: center;
+    background-color: #000000e8;
+	width:100%;
+    /* Navbar styling*/
+}
+
+
+#MainpVideo {
+    right: 0;
+    bottom: 0;
+    width:100%; 
+    z-index: -1;
+  }
+
+.icon{
+	width:170px;
+    height:170px;
+}
+
+.mainh2{
+    font-weight: 500;
+    font-size: 200px;
+    position:absolute;
+    transform: translate(-50%,50%);
+}
+
+nav ul {
+	margin-right:300px;
+
+}
+nav ul li{
+	display:inline-block;
+	line-height:80px;
+	margin:0 5px;
+}
+
+nav ul li a{
+	color:white;
+	font-size:17px;
+	padding:10px 20px;
+	border-radius:40px;
+	font-weight:520;
+	text-transform:uppercase;
+	transition: 1s;
+    text-decoration: none;
+    /* Navbar content styling*/
+}
+
+nav ul li a:hover {
+    background-color: #fff;
+    color: black
+}
+
+.active_1 {
+    background-color:#de2828;
+}
+
+
+.buttons{
+    width: 100%;
+    position: absolute;
+    top: 120%;
+    text-align: center;
+    color: white;
+}
+
+.content_pic{
+    max-width: 100%;
+    height: auto;
+    border-radius: 40px;
+    border-style: solid;
+    border-width: 5px;
+    color: #468c8c;
+}
+
+.grid-container{
+    display: inline-grid;
+    grid-template-columns: auto auto;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+	padding-left: 165px;
+    padding-top: 100px;
+    background-image: url(../Images/fac05c110c458e9bab3a3248bfb3c376.jpg);
+    background-size: cover;
+    /*Content styling*/
+}
+.text-hover {
+    bottom: 133px;
+    width: 98%;
+    left:50%;
+    height: 66%;
+    border-radius: 36px;
+    position: relative;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 0.6s;
+  }
+.text-hover:hover{
+    opacity: 1;
+}
+.text-hover h4{
+    font-size: 36px;
+    color: #f8ee36;
+}
+.text-hover p{
+    font-size: 16px;
+    color:#fff;
+    padding: 25px;  
+}
+.text-hover > *{
+    transform: translateY(25px);
+    transition: transform 0.6s;
+}
+
+.text-hover:hover > *{
+    transform: translateY(0px);
+    
+}
+.grid-container a {
+	text-decoration: none;
+    text-align: center;
+}
+
+#cricket,
+#badminton,
+#tennis,
+#football {
+	transition: 0.2s;
+	width: 400px;
+	height: 400px;
+}
+
+#cricket:hover,
+#badminton:hover,
+#tennis:hover,
+#football:hover {
+	transform: scale(1.05);
+}
+
+/*----------------------------Shop Styling----------------------------*/
+
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+height: 15px;
+width: 15px;
+margin: 0 2px;
+background-color: #de2828;
+border-radius: 50%;
+display: inline-block;
+transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+  
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+/*For the shop body*/
+.shop {
+    background-image: url(../Images/Shopback.jpg);
+    color: #fff;
+}
+
+/*Quote*/
+.head {
+    font-size: 5em;
+    text-align: center;
+}
+
+.btn {
+    text-align: center;
+    vertical-align: middle;
+    padding: .67em .67em;
+    cursor: pointer;
+}
+
+.btn-primary {
+    color: black;
+    background-color: #de2828;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+/*Hovering effect*/
+.btn-primary:hover {
+    background-color:   #eec50e;
+}
+
+.content-section {
+    margin: 1em;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1.5em;
+}
+.section-header {
+    font-weight: normal;
+    color: white;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.shop-item {
+    margin: 30px;
+}
+
+.shop-item-title {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.shop-item-image {
+    height: 250px;
+}
+
+.shop-item-details {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.shop-item-price {
+    flex-grow: 1;
+    color:white;
+}
+
+.shop-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.cart-header {
+    font-weight: bold;
+    font-size: 1.25em;
+    color: white;
+}
+
+.cart-column {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #de2828;
+    margin-right: 1.5em;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.cart-row {
+    display: flex;
+}
+
+.cart-item {
+    width: 45%;
+}
+
+.cart-price {
+    width: 20%;
+    font-size: 1.2em;
+    color: white;
+}
+
+.cart-quantity {
+    width: 35%;
+}
+
+.cart-item-title {
+    color: white;
+    margin-left: .5em;
+    font-size: 1.2em;
+}
+
+.cart-item-image {
+    width: 75px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.cart-quantity-input {
+    height: 34px;
+    width: 50px;
+    border-radius: 5px;
+    border: 1px solid #de2828;
+    background-color:white;
+    color: black;
+    padding: 0;
+    text-align: center;
+    font-size: 1.2em;
+    margin-right: 25px;
+}
+
+.cart-row:last-child {
+    border-bottom: 1px solid #de2828;
+}
+
+.cart-row:last-child .cart-column {
+    border: none;
+}
+
+.cart-total {
+    text-align: end;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.cart-total-title {
+    font-weight: bold;
+    font-size: 1.5em;
+    color:white;
+    margin-right: 20px;
+}
+
+.cart-total-price {
+    color: white;
+    font-size: 1.1em;
+}
+
+.btn-checkout {
+    display: block;
+    margin: 40px auto 80px auto;
+    font-size: 1.75em;
+}
+
+.btn-danger {
+    color: black;
+    background-color: #de2828;
+    border: none;
+    border-radius: .3em;
+    font-weight: bold;
+}
+
+.btn-danger:hover {
+    background-color:  #eec50e;
+}
+
+/*------------------------------Payment Styling------------------------------*/
+.logopay{
+    Padding:30px;
+    height:300px;
+    width: 300px;
+}
+
+.payhead{
+    margin-top: 10px;
+    text-align: center;
+}
+
+.formpay{
+    color: black;
+    margin-top: 20px;
+    margin-left: 32%;
+}
+
+
+input {
+    display: block;
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #e44545;
+    transition: background-color 0.3s ease-in-out;
+}
+
+input:focus {
+background-color: white;
+}
+
+.buttons-signup{
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    color: black;
+    padding-right: 75px;
+}
+
+.button{
+    width: 200px;
+    padding: 15px;
+    border: 2px solid  #de2828;
+    border-radius: 25px;
+    margin: 20px 10px; 
+    font-weight: bold;
+    color: black;
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.paycon{
+    background:#de2828;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: 0.3s;
+}
+
+.button:hover .paycon{
+    width: 100%;
+    z-index: -1;
+}
+
+.button:hover{
+    border: none;
+}
+
+#myVideo{
+    filter: blur(8px);
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+
+#totalpay{
+    text-align: center;
+}
+
+#cardpayment{
+    height: 25%;
+    width: 35%;
+}
+
+
+/*------------------------------Footer Styling------------------------------*/
+
+.grid-footer{
+    background-color:#de2828;
+}
+.icon_footer{
+    width: 15%;
+}
+
+.grid-footer{
+    display: inline-grid;
+    grid-template-columns: auto auto;
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+	padding: 5px;
+
+}
+
+.h3-editor{
+    margin-top: 300px ;
+}
+
+.Main_editor{
+    margin-top: 10px ;
+    padding: 36px;
+    text-align: center;
+    color: white;
+}
+
+.footer-about{
+    display:block;
+    border-color: #ffffff;
+    border-style: solid;
+    padding: 15px;
+    margin-top: -180px;
+    margin-left: 295px;
+    color: white;
+}
+.editor{
+    text-decoration: none;
+    color: #fff;
+}
+.editor:hover{
+    text-decoration: underline;
+    color: #000475;
+}
+
+
+

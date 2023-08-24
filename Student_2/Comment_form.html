@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title> Comment Form</title>
+    <link rel="icon" href="../Images/Titleicon.png">
+    <link rel="stylesheet" type="text/css" href="./Main_comment.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  </head>
+  <body class="comment">
+    <nav>
+      <a href="../Student_2/Mainpage.html">
+        <img class="icon" src="../Images/ICON_a.png" alt="Logo">
+      </a>
+      <ul id="navlist">
+        <li><a href="../Student_2/Mainpage.html">Home</a></li>
+        <li><a class="active_1" href="../Student_2/Comment_form.html">Comments</a></li>
+        <li><a href="../Student_1/Shop.html">Shop</a></li>
+        <li><a href="../Student_3/Student_3/qna.html">Quiz</a></li>
+        <li><a href="../Student_4/sitemap.html">Site Map</a></li>
+        <li><a href="../Student_3/Student_3/about.html ">About Us</a></li>
+        <li><a href="../Student_4/sports2.html">Gallery</a></li>
+      </ul>
+    </nav>
+    <section>
+      <div class="forum">
+        <form id="form_1">
+          <h2 class="comment_h2">Comment Form </h2>
+          <p class="comment_p">We would like your feedback to improve our website</p>
+          <div class="details">
+            <label for="firstname"> First name:</label>
+            <input type="text" id="firstname" name="firstname" placeholder="Enter first name" required> 
+          </div>
+          <div class="details">
+            <label for="lastname"> Last name:</label>
+            <input type="text" id="lastname" name="lastname" placeholder="Enter last name" required>
+          </div>
+          <div class="email_field">
+            <label for="email"> Email:</label>
+            <input type="email" id="email" name="email" placeholder="Example@gmail.com" required>
+          </div>
+          <div class="tel_field">
+            <label for="tel"> Contact Number:</label>
+            <input type="tel" id="tel" name="tel" placeholder="07XXXXXXXX" required>
+          </div>
+          <textarea id="comment_area" cols="15" rows="5" placeholder="Enter your comment here...." required></textarea>
+          <div class="submit">
+            <button class="buttons-comment" onclick="window.location.href='Mainpage.html'"><span></span>BACK</button>
+            <button class="buttons-comment" onclick="reset()"><span></span>RESET</button>
+            <button class="buttons-submit" onclick="submitcomment()"><span></span>SUBMIT</button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <footer>
+      <div class="grid-footer">
+        <div class="grid-item">
+          <img class="icon_footer" src="../Images/ICON_a.png" alt="footer_icon">
+            <div class="footer-about">
+                <h3>About Us</h3>
+                <p>Welcome to our sports website! We are a team of passionate sports enthusiasts who have come together to create a platform for sports.
+                Our website contains content about several sports, a shop for sports items and many more. Thank you for visiting our website and 
+                we hope you enjoy our content!
+                </p>
+            </div>
+            <div class="Main_editor">
+                    <div><h3>Page created by <a class="editor" href="./pageeditor_2.html">M.G.I.H Ranathunga</a></h3></div>
+                    <div><h3> &#169; SportATTIC 2023 | All rights resevered</h3></div>
+            </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+        function eventhandler(event){
+            event.preventDefault()
+            console.log(event);
+        }
+        document.getElementById("form_1").addEventListener("submit",eventhandler);
+        function submitcomment() {
+        var firstname = document.getElementById("firstname").value;
+        var lastname = document.getElementById("lastname").value;
+        var email = document.getElementById("email").value;
+        var tel = document.getElementById("tel").value;
+        var comment_area = document.getElementById("comment_area").value;
+
+        if (firstname === "" || lastname === "" || email === "" || tel === "" || comment_area === "") {
+            alert("Please fill out all the required fields!");
+        } else if (!validateTel(tel)) {
+            alert("Please enter a valid contact number!");
+        } else if (!validateEmail(email)) {
+            alert("Invalid email address!");
+        }else{
+            submitforum();
+        }
+    }
+
+        function submitforum() {
+            var email = "hashen.20220309@iit.ac.lk";
+            var subject = "Comment Feedback - SportsATTIC";
+            var body = "First name: " + document.getElementById("firstname").value + "\n" +
+                        "Last name: " + document.getElementById("lastname").value + "\n" +
+                        "Contact number: " + document.getElementById("tel").value + "\n\n" +
+                        "Comment: " + document.getElementById("comment_area").value;
+            var mailtoContent = "mailto:" + email + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+            window.location.href = mailtoContent
+
+            setTimeout(function(){
+                window.location.href ="thankyou.html"
+            },2500)
+        }
+
+        function reset() {
+            document.getElementById("firstname").value = "";
+            document.getElementById("lastname").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("tel").value = "";
+            document.getElementById("comment_area").value = "";
+        }
+
+        function validateTel(tel) {
+            const regex = /^[0-9]{10}$/;
+            return regex.test(tel);
+        }
+
+        function validateEmail(email) {
+            var re = /\S+@\S+\.\S+/;
+            return re.test(email);
+        }
+    </script>
+  </body>
+</html>
+
